@@ -9,11 +9,11 @@ let emEdicao = false;
 let perfilEdicao = null; 
 
 function inicializarDados() { 
-  let dados = JSON.parse(localStorage.getItem("estevinflix-users")); 
+  let dados = JSON.parse(localStorage.getItem("Catozo's Flix-users")); 
   if (dados === null) { 
     dados = [ 
       { 
-        nome: "Estevin", 
+        nome: "Catozo", 
         avatar: "img/users/avatar.png", 
         crianca: false 
       }, 
@@ -28,7 +28,7 @@ function inicializarDados() {
         crianca: true 
       } 
     ]; 
-    localStorage.setItem("estevinflix-users", JSON.stringify(dados)); 
+    localStorage.setItem("Catozo's Flix-users", JSON.stringify(dados)); 
   } 
   perfis = dados; 
 }
@@ -78,7 +78,7 @@ function adicionarPerfil() {
   }; 
   
   perfis.push(perfil); 
-  localStorage.setItem("estevinflix-users", JSON.stringify(perfis)); 
+  localStorage.setItem("Catozo's Flix-users", JSON.stringify(perfis)); 
   document.getElementById('Nome').value = ''; 
   document.getElementById('Crianca').checked = false; 
   document.querySelector('.btn-close').click(); 
@@ -179,7 +179,7 @@ function atualizarPerfil() {
   }; 
   
   perfis[perfilEdicao] = perfil; 
-  localStorage.setItem("estevinflix-users", JSON.stringify(perfis)); 
+  localStorage.setItem("Catozo's Flix-users", JSON.stringify(perfis)); 
   carregarPerfis(); 
   
   let icons = document.querySelectorAll('.icon'); 
@@ -192,7 +192,7 @@ function atualizarPerfil() {
 
 function excluirPerfil() { 
   perfis.splice(perfilEdicao, 1); 
-  localStorage.setItem("estevinflix-users", JSON.stringify(perfis)); 
+  localStorage.setItem("Catozo's Flix-users", JSON.stringify(perfis)); 
   carregarPerfis(); 
   
   let icons = document.querySelectorAll('.icon'); 
